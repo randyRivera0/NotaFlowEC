@@ -1,16 +1,18 @@
 # NotaFlow EC
 
-Esqueleto inicial para asistir la gestión y negociación de notas de crédito tributarias en Ecuador. FastAPI y NiceGUI comparten la misma aplicación ASGI mediante `ui.run_with(app)`.
+MVP demostrable para asistir el ingreso, validación y negociación de notas de crédito tributarias en Ecuador. FastAPI y NiceGUI comparten la misma aplicación ASGI mediante `ui.run_with(app)`.
 
 ## Alcance
 
 - Dashboard con métricas y expedientes ficticios en memoria.
-- Formulario visual para crear un expediente.
-- Detalle con pestañas de resumen, documentos, sugerencias, validaciones, negociación e historial.
+- Ingreso asistido con IA simulada, antecedentes y aprobación de cada sugerencia.
+- Diez validaciones determinísticas contra una fuente SRI simulada, con evidencia y próxima acción.
+- Borrador de negociación, cálculos, historial y solicitudes de aprobación humana.
+- Detalle con resumen, documentos, sugerencias, validaciones, negociación e historial.
 - Endpoint `GET /api/health`.
-- Capas preparadas para servicios, reglas, repositorios e integraciones.
+- Capas separadas para servicios, reglas e integraciones.
 
-Este incremento no persiste datos ni implementa extracción PDF, IA, validaciones o transacciones financieras.
+La aplicación no ejecuta transacciones financieras ni acciones reguladas. Los datos permanecen en memoria y se reinician al detener la aplicación.
 
 ## Instalación y ejecución
 
